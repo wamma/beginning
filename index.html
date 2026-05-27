@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>빅이닝 - 응원하는 팀의 경기를 더 편하고 빠르게</title>
+  <meta name="description" content="KBO 야구 경기를 위한 위젯 중심의 iOS·Apple Watch 앱. 응원하는 팀의 점수와 경기 상황을 잠금화면, Dynamic Island, Apple Watch에서 한눈에.">
+  <meta property="og:title" content="빅이닝 (Beginning)">
+  <meta property="og:description" content="응원하는 팀의 경기를 더 편하고 빠르게">
+  <meta property="og:image" content="assets/img/showcase.png">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#eef4f5">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                   "Pretendard", "Noto Sans KR", "Helvetica Neue", Arial, sans-serif;
+      background: #eef4f5;
+      color: #1a1a1a;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 64px 24px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .header-img {
+      width: 100%;
+      max-width: 480px;
+      height: auto;
+      display: block;
+    }
+
+    .showcase-img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      display: block;
+      margin-top: 16px;
+    }
+
+    .stores {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 32px;
+    }
+
+    .store-button {
+      display: inline-block;
+      border-radius: 12px;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+    }
+
+    .store-button:hover {
+      transform: translateY(-2px);
+      opacity: 0.92;
+    }
+
+    .store-button:active {
+      transform: translateY(0);
+      opacity: 0.85;
+    }
+
+    .store-button:focus-visible {
+      outline: 2px solid #1a1a1a;
+      outline-offset: 4px;
+    }
+
+    .store-button img {
+      display: block;
+      height: 56px;
+      width: auto;
+      border-radius: 12px;
+    }
+
+    @media (max-width: 480px) {
+      .store-button img { height: 48px; }
+      .stores { gap: 12px; margin-top: 24px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .store-button { transition: none; }
+      .store-button:hover { transform: none; }
+    }
+
+    footer {
+      max-width: 720px;
+      margin: 32px auto 0;
+      padding: 24px 24px 48px;
+      text-align: center;
+      letter-spacing: 0.02em;
+    }
+
+    footer nav {
+      margin-bottom: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 4px 16px;
+    }
+
+    footer nav a {
+      color: #6b7280;
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.15s ease;
+    }
+
+    footer nav a:hover {
+      color: #1a1a1a;
+      text-decoration: underline;
+    }
+
+    footer .copyright {
+      font-size: 12px;
+      color: #a3aab8;
+    }
+
+    @media (max-width: 480px) {
+      main { padding: 32px 16px 16px; }
+      footer { padding: 16px 16px 32px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <img src="assets/img/header.png"
+         alt="빅이닝 Beginning — 응원하는 팀의 경기를 더 편하고 빠르게"
+         class="header-img">
+    <img src="assets/img/showcase.png"
+         alt="빅이닝 앱의 위젯, 잠금화면, Dynamic Island, 라인업 화면 예시"
+         class="showcase-img">
+    <div class="stores" aria-label="앱 다운로드">
+      <a class="store-button" href="#" aria-label="App Store에서 빅이닝 다운로드 하기">
+        <img src="assets/img/app-store.png" alt="App Store에서 다운로드 하기">
+      </a>
+      <a class="store-button" href="#" aria-label="Google Play에서 빅이닝 다운로드">
+        <img src="assets/img/google-play.png" alt="Google Play에서 다운로드">
+      </a>
+    </div>
+  </main>
+  <footer>
+    <nav>
+      <a href="privacy.html">개인정보처리방침</a>
+      <a href="terms.html">이용약관</a>
+      <a href="mailto:pparkheong19@gmail.com">문의</a>
+    </nav>
+    <p class="copyright">© 2026 BEGINNING. ALL RIGHTS RESERVED.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# OMC / Claude harness state
+.omc/
+.claude/
+.claude-history/
+
+# Env / secrets (preventive — none currently exist)
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
