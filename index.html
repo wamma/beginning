@@ -23,13 +23,22 @@
       -moz-osx-font-smoothing: grayscale;
     }
 
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100svh;
+    }
+
     main {
       max-width: 720px;
+      width: 100%;
       margin: 0 auto;
       padding: 64px 24px 24px;
       display: flex;
       flex-direction: column;
       align-items: center;
+      flex: 1;
+      min-height: 0;
     }
 
     .header-img {
@@ -37,6 +46,7 @@
       max-width: 480px;
       height: auto;
       display: block;
+      flex-shrink: 0;
     }
 
     .showcase-img {
@@ -45,6 +55,7 @@
       height: auto;
       display: block;
       margin-top: 16px;
+      object-fit: contain;
     }
 
     .stores {
@@ -84,8 +95,8 @@
     }
 
     @media (max-width: 480px) {
-      .store-button img { height: 48px; }
-      .stores { gap: 12px; margin-top: 24px; }
+      .store-button img { height: 44px; }
+      .stores { gap: 10px; margin-top: 12px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -127,8 +138,26 @@
     }
 
     @media (max-width: 480px) {
-      main { padding: 32px 16px 16px; }
-      footer { padding: 16px 16px 32px; }
+      main {
+        padding: 16px 16px 8px;
+        justify-content: space-between;
+      }
+      .header-img { max-width: 200px; }
+      .showcase-img {
+        margin-top: 8px;
+        max-height: 52svh;
+        width: auto;
+        max-width: 100%;
+        min-height: 0;
+        flex: 1 1 auto;
+      }
+      footer {
+        margin-top: 0;
+        padding: 8px 16px 16px;
+      }
+      footer nav { margin-bottom: 6px; }
+      footer nav a { font-size: 12px; }
+      footer .copyright { font-size: 11px; }
     }
   </style>
 </head>
